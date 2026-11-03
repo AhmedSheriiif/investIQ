@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+sqlalchemy
+python-jose
+pandas
+numpy
+requests
+yfinance

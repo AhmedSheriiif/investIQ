@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --void: #0b0f14;
+  --panel: #131920;
+  --panel-raised: #1a212a;
+  --hairline: #232b35;
+  --ink: #e8ecef;
+  --muted: #7c8894;
+  --muted-dim: #4b545e;
+  --signal-amber: #e8a33d;
+  --signal-amber-dim: #4a3a20;
+  --signal-green: #4fa980;
+  --signal-green-dim: #1f3a30;
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-panel-raised: var(--panel-raised);
+  --color-hairline: var(--hairline);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-muted-dim: var(--muted-dim);
+  --color-signal-amber: var(--signal-amber);
+  --color-signal-amber-dim: var(--signal-amber-dim);
+  --color-signal-green: var(--signal-green);
+  --color-signal-green-dim: var(--signal-green-dim);
+  --font-mono: var(--font-plex-mono);
+  --font-sans: var(--font-plex-sans);
+}
+
+body {
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+[dir="rtl"] {
+  font-family: var(--font-plex-arabic), var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Subtle instrument-grade grid texture, very low visual weight - reads as
+   "precision tool" rather than "marketing page". Never competes with content. */
+.instrument-bg {
+  background-image:
+    linear-gradient(var(--hairline) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: -1px -1px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+::selection {
+  background: var(--signal-amber-dim);
+  color: var(--ink);
+}

@@ -1,0 +1,8 @@
+.env
+.idea/
+__pycache__/
+*.pyc
+reports/
+main.py
+node_modules/
+.next/
